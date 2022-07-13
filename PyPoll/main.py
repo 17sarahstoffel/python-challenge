@@ -31,16 +31,18 @@ with open(election_data) as csvfile:
 
             votes_for_candidate[candidates_complete_list] = 1
         
+        
         else:
             votes_for_candidate[candidates_complete_list] = votes_for_candidate[candidates_complete_list] + 1
 
-
+        #finding the total votes for each canidate and then vote percentage
         for (row[2]) in votes_for_candidate:
 
             votes = votes_for_candidate.get(row[2])
             vote_percentage = float(votes) / float(total_votes) *100
             round_vote_percentage = round(vote_percentage,3)
 
+            #fininding the winner
             if (votes  > winning_count):
                 winning_count = votes
                 winning_candidate = row[2]
