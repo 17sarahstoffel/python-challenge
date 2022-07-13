@@ -65,7 +65,7 @@ with open(budget_data) as csv_file:
     print("Greatest Increase in Profits: " + str(greatest_increase_month) + " ($" + str(greatest_increase) + ")")
     print("Greatest Decrease in Profits: " + str(greatest_decrease_month) + " ($" + str(greatest_decrease) + ")")
 
-
+    #creating text file
 with open ("analysis/PyBank_analysis.txt", "w") as f:
     f.write("Financial Analysis" + "\n")
     f.write("---------------------------" + "\n")
